@@ -75,7 +75,7 @@ const {loading, error} = useSelector((state) => state.user)
   
         <button
           disabled={loading}
-          className='bg-orange-600 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80 font-semibold'
+          className='bg-orange-600 text-black p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80 font-medium'
         >
           {loading ? 'Loading...' : 'Sign In'}
         </button>
@@ -86,7 +86,7 @@ const {loading, error} = useSelector((state) => state.user)
       <div className='flex gap-2 mt-5'>
         <p className='text-orange-200'>Don't have an account?</p>
         <Link to={'/signup'}>
-          <span className='text-orange-400 hover:underline'>Sign up</span>
+          <span className='text-orange-400 hover:underline f'>Sign up</span>
         </Link>
       </div>
   

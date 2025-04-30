@@ -57,7 +57,7 @@ export default function SignUp() {
   return (
     <div className='w-full h-screen flex justify-center items-center'>
     <div className='p-7 w-[40%] max-w-lg mx-auto bg-black text-orange-100 rounded-lg'>
-      <h1 className='text-3xl text-center font-semibold my-7 text-orange-500'>Sign Up</h1>
+      <h1 className='text-3xl text-center font-semibold my-7  text-orange-500'>Sign Up</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input 
           type="text" 
