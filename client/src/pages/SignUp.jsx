@@ -54,24 +54,49 @@ export default function SignUp() {
 
 
 
-    return (
-      <div className='p-3 max-w-lg mx-auto'>
-        <h1 className=' text-3xl text-center font-semibold my-7 '>Sign Up</h1>
-        <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
-          <input type="text" placeholder='Username' className='border p-3 rounded-lg' id='username' onChange={handleChange} />
-          <input type="email" placeholder='Email' className='border p-3 rounded-lg' id='email' onChange={handleChange} />
-          <input type="password" placeholder='Password' className='border p-3 rounded-lg' id='password' onChange={handleChange} />
-          <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading ? 'Loading...':'Sign Up'}</button>
-          <OAuth/>
-        </form>
-        <div className='flex gap-2 mt-5'>
-          <p>Have an account?</p>
-          <Link to={'/signin'}>
-            <span className='text-blue-700'>Sign in</span>
-          </Link>
-        </div>
-        {error && <p className='text-red-600 mt-5'>{error}</p>}
+  return (
+    <div className='w-full h-screen flex justify-center items-center'>
+    <div className='p-7 w-[40%] max-w-lg mx-auto bg-black text-orange-100 rounded-lg'>
+      <h1 className='text-3xl text-center font-semibold my-7 text-orange-500'>Sign Up</h1>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+        <input 
+          type="text" 
+          placeholder='Username' 
+          className='border border-orange-500 p-3 rounded-lg bg-black text-orange-100 placeholder-orange-300 focus:outline-none focus:ring-1 focus:ring-orange-500' 
+          id='username' 
+          onChange={handleChange} 
+        />
+        <input 
+          type="email" 
+          placeholder='Email' 
+          className='border border-orange-500 p-3 rounded-lg bg-black text-orange-100 placeholder-orange-300 focus:outline-none focus:ring-1 focus:ring-orange-500' 
+          id='email' 
+          onChange={handleChange} 
+        />
+        <input 
+          type="password" 
+          placeholder='Password' 
+          className='border border-orange-500 p-3 rounded-lg bg-black text-orange-100 placeholder-orange-300 focus:outline-none focus:ring-1 focus:ring-orange-500' 
+          id='password' 
+          onChange={handleChange} 
+        />
+        <button 
+          disabled={loading} 
+          className='bg-orange-600 text-black p-3 rounded-lg uppercase hover:bg-orange-700 disabled:opacity-80 font-medium transition-colors'
+        >
+          {loading ? 'Loading...' : 'Sign Up'}
+        </button>
+        <OAuth/>
+      </form>
+      <div className='flex gap-2 mt-5'>
+        <p>Have an account?</p>
+        <Link to={'/signin'}>
+          <span className='text-orange-500 hover:text-orange-400'>Sign in</span>
+        </Link>
       </div>
-    )
+      {error && <p className='text-orange-400 mt-5'>{error}</p>}
+    </div>
+    </div>
+  )
   
 }

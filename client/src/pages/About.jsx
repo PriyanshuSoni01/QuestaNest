@@ -2,13 +2,49 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div className='py-20 px-4 max-w-6xl mx-auto'>
-      <h1 className='text-3xl font-bold mb-4 text-slate-800'>About Sahand Estate</h1>
-      <p className='mb-4 text-slate-700'>Sahand Estate is a leading real estate agency that specializes in helping clients buy, sell, and rent properties in the most desirable neighborhoods. Our team of experienced agents is dedicated to providing exceptional service and making the buying and selling process as smooth as possible.</p>
-      <p className='mb-4 text-slate-700'>
-      Our mission is to help our clients achieve their real estate goals by providing expert advice, personalized service, and a deep understanding of the local market. Whether you are looking to buy, sell, or rent a property, we are here to help you every step of the way.
+    <div className='w-full bg-black/90'>
+    <div className="py-16 px-4 w-[100%]  max-w-6xl text-orange-100  shadow-lg">
+      <h1 className="text-3xl font-bold mb-4 text-orange-400">About QuestaNest</h1>
+      <p className="mb-4 text-orange-200">
+        At <span className="font-semibold text-orange-300">Questanest</span>, we don't just find properties—we find <span className="italic">homes</span> where dreams take root. As a premier real estate agency, we specialize in guiding buyers, sellers, and renters through the most sought-after neighborhoods with unmatched expertise and passion.
       </p>
-      <p className='mb-4 text-slate-700'>Our team of agents has a wealth of experience and knowledge in the real estate industry, and we are committed to providing the highest level of service to our clients. We believe that buying or selling a property should be an exciting and rewarding experience, and we are dedicated to making that a reality for each and every one of our clients.</p>
+  
+      <h2 className="text-xl font-bold mt-8 mb-4 text-orange-400">Why Choose QuestaNest?</h2>
+      <ul className="mb-4 text-orange-200 space-y-2">
+        <li className="flex items-start">
+          <span className="mr-2 text-orange-400">✔</span>
+          <span>
+            <span className="font-semibold text-orange-300">Expert Guidance</span> – Our seasoned agents bring deep market knowledge and sharp negotiation skills to ensure you get the best deal.
+          </span>
+        </li>
+        <li className="flex items-start">
+          <span className="mr-2 text-orange-400">✔</span>
+          <span>
+            <span className="font-semibold text-orange-300">Personalized Service</span> – We listen, understand, and tailor our approach to match your unique real estate goals.
+          </span>
+        </li>
+        <li className="flex items-start">
+          <span className="mr-2 text-orange-400">✔</span>
+          <span>
+            <span className="font-semibold text-orange-300">Seamless Experience</span> – From first search to final keys, we make buying, selling, or renting effortless and exciting.
+          </span>
+        </li>
+        <li className="flex items-start">
+          <span className="mr-2 text-orange-400">✔</span>
+          <span>
+            <span className="font-semibold text-orange-300">Trusted Partnerships</span> – We build lasting relationships, not just transactions, because your success is our legacy.
+          </span>
+        </li>
+      </ul>
+  
+      <p className="mb-4 text-orange-200">
+        Whether you're searching for a cozy starter home, a luxury estate, or a smart investment, <span className="font-semibold text-orange-300">Questanest</span> is your trusted partner in turning real estate aspirations into reality.
+      </p>
+  
+      <p className="text-lg font-medium mt-6 text-orange-400">
+        Your journey begins here. Let's find your perfect Nest.
+      </p>
+    </div>
     </div>
   )
 }

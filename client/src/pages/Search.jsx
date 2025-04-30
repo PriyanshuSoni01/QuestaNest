@@ -128,131 +128,131 @@ export default function Search() {
     setListings([...listings, ...data]);
   };
   return (
-    <div className='flex flex-col md:flex-row'>
-      <div className='p-7  border-b-2 md:border-r-2 md:min-h-screen'>
+    <div className='flex flex-col md:flex-row bg-black'>
+      <div className='p-7 border-b-2 border-orange-800 md:border-r-2 md:border-b-0 md:min-h-screen'>
         <form onSubmit={handleSubmit} className='flex flex-col gap-8'>
           <div className='flex items-center gap-2'>
-            <label className='whitespace-nowrap font-semibold'>
+            <label className='whitespace-nowrap font-semibold text-orange-300'>
               Search Term:
             </label>
             <input
               type='text'
               id='searchTerm'
               placeholder='Search...'
-              className='border rounded-lg p-3 w-full'
+              className='border border-orange-600 rounded-lg p-3 w-full bg-black text-orange-100 placeholder-orange-400 focus:outline-none focus:ring-1 focus:ring-orange-500'
               value={sidebardata.searchTerm}
               onChange={handleChange}
             />
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
-            <label className='font-semibold'>Type:</label>
+            <label className='font-semibold text-orange-300'>Type:</label>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='all'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.type === 'all'}
               />
-              <span>Rent & Sale</span>
+              <span className='text-orange-200'>Rent & Sale</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='rent'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.type === 'rent'}
               />
-              <span>Rent</span>
+              <span className='text-orange-200'>Rent</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='sale'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.type === 'sale'}
               />
-              <span>Sale</span>
+              <span className='text-orange-200'>Sale</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='offer'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.offer}
               />
-              <span>Offer</span>
+              <span className='text-orange-200'>Offer</span>
             </div>
           </div>
           <div className='flex gap-2 flex-wrap items-center'>
-            <label className='font-semibold'>Amenities:</label>
+            <label className='font-semibold text-orange-300'>Amenities:</label>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='parking'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.parking}
               />
-              <span>Parking</span>
+              <span className='text-orange-200'>Parking</span>
             </div>
             <div className='flex gap-2'>
               <input
                 type='checkbox'
                 id='furnished'
-                className='w-5'
+                className='w-5 accent-orange-500'
                 onChange={handleChange}
                 checked={sidebardata.furnished}
               />
-              <span>Furnished</span>
+              <span className='text-orange-200'>Furnished</span>
             </div>
           </div>
           <div className='flex items-center gap-2'>
-            <label className='font-semibold'>Sort:</label>
+            <label className='font-semibold text-orange-300'>Sort:</label>
             <select
               onChange={handleChange}
               defaultValue={'created_at_desc'}
               id='sort_order'
-              className='border rounded-lg p-3'
+              className='border border-orange-600 rounded-lg p-3 bg-black text-orange-100 focus:outline-none focus:ring-1 focus:ring-orange-500'
             >
-              <option value='regularPrice_desc'>Price high to low</option>
-              <option value='regularPrice_asc'>Price low to hight</option>
-              <option value='createdAt_desc'>Latest</option>
-              <option value='createdAt_asc'>Oldest</option>
+              <option value='regularPrice_desc' className='bg-black'>Price high to low</option>
+              <option value='regularPrice_asc' className='bg-black'>Price low to high</option>
+              <option value='createdAt_desc' className='bg-black'>Latest</option>
+              <option value='createdAt_asc' className='bg-black'>Oldest</option>
             </select>
           </div>
-          <button className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95'>
+          <button className='bg-orange-600 text-black p-3 rounded-lg uppercase hover:bg-orange-700 font-medium transition-colors'>
             Search
           </button>
         </form>
       </div>
       <div className='flex-1'>
-        <h1 className='text-3xl font-semibold border-b p-3 text-slate-700 mt-5'>
+        <h1 className='text-3xl font-semibold border-b border-orange-800 p-3 text-orange-400 mt-5'>
           Listing results:
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
           {!loading && listings.length === 0 && (
-            <p className='text-xl text-slate-700'>No listing found!</p>
+            <p className='text-xl text-orange-300'>No listing found!</p>
           )}
           {loading && (
-            <p className='text-xl text-slate-700 text-center w-full'>
+            <p className='text-xl text-orange-400 text-center w-full'>
               Loading...
             </p>
           )}
-
+  
           {!loading &&
             listings &&
             listings.map((listing) => (
               <ListingItem key={listing._id} listing={listing} />
             ))}
-
+  
           {showMore && (
             <button
               onClick={onShowMoreClick}
-              className='text-green-700 hover:underline p-7 text-center w-full'
+              className='text-orange-500 hover:text-orange-400 hover:underline p-7 text-center w-full transition-colors'
             >
               Show more
             </button>
